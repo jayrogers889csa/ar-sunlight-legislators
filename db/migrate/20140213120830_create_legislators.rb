@@ -4,7 +4,6 @@ class CreateLegislators < ActiveRecord::Migration
   def change
     create_table :legislators do |t|
 
-      t.integer :legislator_id
       t.string :title
       t.string :firstname
       # t.string :middlename
@@ -33,7 +32,7 @@ class CreateLegislators < ActiveRecord::Migration
       # t.integer :facebook_id
       # t.string :official_rss
       # t.string :congress_class
-      t.date :birthdate
+      t.string :birthdate
 
       t.timestamps
     end
