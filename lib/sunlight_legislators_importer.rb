@@ -9,7 +9,6 @@ module SunlightLegislatorsImporter
     csv = CSV.new(File.open(filename), :headers => true, :header_converters => :symbol)
     csv.each do |row|
       Legislator.create!(filtered_attributes row)
-      # require 'pry'; binding.pry
     end
   end
 

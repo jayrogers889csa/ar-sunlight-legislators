@@ -1,12 +1,13 @@
 require_relative '../../db/config'
 
 class Legislator < ActiveRecord::Base
+  has_many :tweets
 
-  # validates :twitter_id, uniqueness: true
   # validates :phone, uniqueness: true
   # validates :fax, uniqueness: true
   # validate :format_phone
   # validate :format_fax
+
   def self.print_state_legislators(state)
     puts "Senators: "
     self.where("state = ? AND title = 'Sen'", state).order(lastname: :asc).each do |legislator|

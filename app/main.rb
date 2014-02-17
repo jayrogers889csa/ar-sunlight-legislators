@@ -1,7 +1,8 @@
 require_relative '../db/config'
 require_relative '../app/models/legislator.rb'
+require_relative '../app/models/tweet.rb'
 
-# Legislator.print_state_legislators('CA')
+
 
 Legislator.print_state_legislators('GA')
 
@@ -30,5 +31,11 @@ puts "---"
 Legislator.senator_count
 
 Legislator.representative_count
+
+puts "---"
+
+Tweet.print_ten_tweets('neilabercrombie')
+
+puts "---"
 
 
